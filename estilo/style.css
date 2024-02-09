@@ -136,6 +136,7 @@ mark {
     font-size: var(--fonte_titulo);
     font-weight: 500;
     text-align: left;
+    white-space: nowrap;
 }
 
 .cbc_dir {
