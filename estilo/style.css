@@ -115,9 +115,19 @@ mark {
     height: 60px;
     background: transparent;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    overflow: hidden;
+}
+
+.cbc_esq {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
 }
 
 .titulo_pagina {
@@ -126,6 +136,52 @@ mark {
     font-weight: 500;
     text-align: left;
 }
+
+.cbc_dir {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    gap: 5px;
+}
+
+.cbc_dir > button {
+    height: 80%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: var(--borda_arredondada_1);
+    transition: var(--transition_1);
+}
+
+.cbc_dir > button > svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition_1);
+}
+
+.cbc_dir > button:hover {
+    background: var(--item_hover);
+}
+
+.cbc_dir > button:hover > svg {
+    transform: scale(1.2);
+    fill: var(--cor_primaria_2);
+}
+
+
+
+
+
+
+
+
+
+
 
 .centro_pagina {
     width: 100%;
