@@ -210,21 +210,6 @@ mark {
     display: none;
 }
 
-/* .centro_pagina {
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    background: var(--verde);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 0;
-    overflow-y: auto;
-    scroll-behavior: smooth !important;
-    scroll-snap-type: y proximity;
-} */
-
 .secao_pagina {
     width: 100%;
     height: 100%;
