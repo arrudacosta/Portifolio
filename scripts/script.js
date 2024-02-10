@@ -1,9 +1,9 @@
 // Muda a barra de progresso lateral conforme o scroll
-document.querySelector(`.centro_pagina`).addEventListener('scroll', () => {
-    let secao_aberta = Array.from(document.querySelectorAll(`.secao_pagina`)).filter(x => x.getBoundingClientRect().top - 30 <= document.querySelector(`.area_util`).getBoundingClientRect().top && x.getBoundingClientRect().top + 30 >= document.querySelector(`.area_util`).getBoundingClientRect().top)[0]
+document.querySelector(`.conj_secoes`).addEventListener('scroll', () => {
+    let secao_aberta = Array.from(document.querySelectorAll(`.secao_pagina`)).filter(x => x.getBoundingClientRect().top - 30 <= document.querySelector(`.conj_secoes`).getBoundingClientRect().top && x.getBoundingClientRect().top + 30 >= document.querySelector(`.conj_secoes`).getBoundingClientRect().top)[0]
     let todas_secoes = Array.from(document.querySelectorAll(`.secao_pagina`))
     let index_secao = todas_secoes.indexOf(secao_aberta)
-
+    console.log(index_secao);
     // Verifica se o index esta correto
     if(index_secao !== -1) {
 

@@ -1,8 +1,8 @@
 // Muda o cenário conforme rolagem
-document.querySelector(`.centro_pagina`).addEventListener('scroll', () => {
-    let lista = document.querySelector(`.centro_pagina`)
+document.querySelector(`.conj_secoes`).addEventListener('scroll', () => {
+    let lista = document.querySelector(`.conj_secoes`)
     let sec_calculadora = document.querySelector(`#sec_calculadora`)
-    let alt_sec_na_lista = Math.abs(sec_calculadora.parentElement.offsetTop - sec_calculadora.offsetTop)
+    let alt_sec_na_lista = sec_calculadora.offsetTop
     let alt_secao = document.querySelector(`#sec_calculadora`).offsetHeight
 
     // Saiu da seção
@@ -11,7 +11,7 @@ document.querySelector(`.centro_pagina`).addEventListener('scroll', () => {
     }
     // Entrou na seção
     else if(lista.scrollTop >= (alt_sec_na_lista - alt_secao)) {
-        
+
         // Prepara a nova rotação
         let graus_por_pixel = 180 / (alt_secao * 2)
         let angulo = ((lista.scrollTop - alt_sec_na_lista + alt_secao) * graus_por_pixel) - 90
@@ -26,6 +26,28 @@ document.querySelector(`.centro_pagina`).addEventListener('scroll', () => {
     }
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

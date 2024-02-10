@@ -190,7 +190,7 @@ mark {
 
 
 
-.area_util {
+.conj_secoes {
     position: relative;
     width: 100%;
     height: 100%;
@@ -200,175 +200,37 @@ mark {
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth !important;
+    scroll-snap-type: y proximity;
+    gap: 50px;
 }
 
+.conj_secoes::-webkit-scrollbar {
+    display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.centro_pagina {
+/* .centro_pagina {
     position: relative;
     width: 100%;
     height: fit-content;
-    background: transparent;
+    background: var(--verde);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    z-index: 0;
     overflow-y: auto;
     scroll-behavior: smooth !important;
     scroll-snap-type: y proximity;
-}
-
-.centro_pagina::-webkit-scrollbar {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aba_paginacao_vertic {
-    position: absolute;
-    right: -80px;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    background: transparent;
-    z-index: 100;
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: var(--transition_1);
-}
-
-.aba_paginacao_vertic.ativo {
-    right: 0px;
-    opacity: 1;
-    pointer-events: initial;
-}
-
-.conj_dados_paginacao {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-}
-
-.linha_vertic_paginacao {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    height: calc(100% - 10px);
-    flex-shrink: 0;
-    background: #dddddd;
-    border-radius: 2px;
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.pontos_vertic_paginacao {
-    background: transparent;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    z-index: 1;
-}
-
-.pino_paginacao {
-    position: relative;
-    min-width: 20px;
-    min-height: 20px;
-    background: transparent;
-    flex-shrink: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pino_paginacao > .pino {
-    width: 10px;
-    height: 10px;
-    background: #bebebe;
-    transition: var(--transition_1);
-    border-radius: 50%;
-}
-
-.pino_paginacao:hover > .pino {
-    width: 15px;
-    height: 15px;
-}
-
-.pino_paginacao.ativo > .pino {
-    width: 20px;
-    height: 20px;
-    background: var(--laranja);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 .secao_pagina {
     width: 100%;
     height: 100%;
     max-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
     background: transparent;
     flex-shrink: 0;
     scroll-snap-align: center;
@@ -416,25 +278,6 @@ mark {
     color: var(--texto_2);
     font-size: var(--fonte_descricao_2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sec_item_demonst_1 {
     display: flex;
@@ -632,3 +475,136 @@ mark {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aba_paginacao_vertic {
+    position: fixed;
+    right: -80px;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background: transparent;
+    z-index: 1000;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition_1);
+    flex-shrink: 0;
+}
+
+.aba_paginacao_vertic.ativo {
+    right: 0px;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.conj_dados_paginacao {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.linha_vertic_paginacao {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: calc(100% - 10px);
+    flex-shrink: 0;
+    background: #dddddd;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.pontos_vertic_paginacao {
+    background: transparent;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    z-index: 1;
+}
+
+.pino_paginacao {
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    background: transparent;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pino_paginacao > .pino {
+    width: 10px;
+    height: 10px;
+    background: #bebebe;
+    transition: var(--transition_1);
+    border-radius: 50%;
+}
+
+.pino_paginacao:hover > .pino {
+    width: 15px;
+    height: 15px;
+}
+
+.pino_paginacao.ativo > .pino {
+    width: 20px;
+    height: 20px;
+    background: var(--laranja);
+}
