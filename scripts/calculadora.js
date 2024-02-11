@@ -1,4 +1,5 @@
 // Muda o cenário conforme rolagem
+let secao_calcul_fixada = false
 document.querySelector(`.conj_secoes`).addEventListener('scroll', () => {
     let lista = document.querySelector(`.conj_secoes`)
     let sec_calculadora = document.querySelector(`#sec_calculadora`)

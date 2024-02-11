@@ -3,7 +3,7 @@ document.querySelector(`.conj_secoes`).addEventListener('scroll', () => {
     let secao_aberta = Array.from(document.querySelectorAll(`.secao_pagina`)).filter(x => x.getBoundingClientRect().top - 30 <= document.querySelector(`.conj_secoes`).getBoundingClientRect().top && x.getBoundingClientRect().top + 30 >= document.querySelector(`.conj_secoes`).getBoundingClientRect().top)[0]
     let todas_secoes = Array.from(document.querySelectorAll(`.secao_pagina`))
     let index_secao = todas_secoes.indexOf(secao_aberta)
-    console.log(index_secao);
+
     // Verifica se o index esta correto
     if(index_secao !== -1) {
 
@@ -42,6 +42,18 @@ document.querySelector(`.conj_secoes`).addEventListener('scroll', () => {
     
             // Ativa o pino correspondente a página
             document.querySelectorAll(`.pino_paginacao`)[1].classList.add('ativo')
+            
+        }
+        else if(index_secao === 4) {
+
+            // Exibe a barra de progresso
+            document.querySelector(`.aba_paginacao_vertic`).classList.add('ativo')
+
+            // Remove destaque dos pinos
+            document.querySelectorAll(`.pino_paginacao`).forEach(x => x.classList.remove('ativo'))
+    
+            // Ativa o pino correspondente a página
+            document.querySelectorAll(`.pino_paginacao`)[2].classList.add('ativo')
             
         }
         else {

@@ -210,7 +210,7 @@ mark {
     display: none;
 }
 
-.secao_pagina {
+.secao_dividida {
     width: 100%;
     height: 100%;
     max-height: 100%;
@@ -518,6 +518,7 @@ mark {
     pointer-events: none;
     transition: var(--transition_1);
     flex-shrink: 0;
+    pointer-events: none;
 }
 
 .aba_paginacao_vertic.ativo {
@@ -581,6 +582,7 @@ mark {
     background: #bebebe;
     transition: var(--transition_1);
     border-radius: 50%;
+    pointer-events: initial;
 }
 
 .pino_paginacao:hover > .pino {
@@ -593,3 +595,121 @@ mark {
     height: 20px;
     background: var(--laranja);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.secao_unica {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+.conj_mapa {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: var(--background);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(70deg) rotateY(0deg) rotateZ(0deg) scale(1.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: var(--sombra_01);
+    border-radius: var(--borda_arredondada_1);
+}
+
+.conj_mapa.ativo {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.sec_dados_desc_2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #e3e3e3;
+    background: linear-gradient(90deg, #e3e3e3 0%, #e3e3e3 70%, #e3e3e300 100%);
+    gap: 20px;
+    padding: 0 150px 0 30px;
+    z-index: 1;
+    transform: translateX(-100%);
+}
+
+.conj_mapa.ativo > .sec_dados_desc_2 {
+    transform: translateX(0%);
+    transition: var(--transition_1);
+}
+
+.cont_mapa {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.conj_mapa.ativo > .cont_mapa {
+    pointer-events: initial;
+}
+
+
+
+
+
+
+
+
+

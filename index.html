@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arruda Costa</title>
 
-
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -45,15 +45,16 @@
 
     <main class="conj_secoes">
 
-        <section id="sec_inicio" class="secao_pagina">
+        <section id="sec_inicios" class="secao_dividida secao_pagina">
             <p style="margin: auto; font-size: 32px; color: var(--texto_1);">Em desenvolvimento...</p>
         </section>
-        <section id="sec_inicio" class="secao_pagina">
+
+        <section id="sec_inicio" class="secao_dividida secao_pagina">
             <p style="margin: auto; font-size: 32px; color: var(--texto_1);">Em desenvolvimento...</p>
         </section>
 
 
-        <section id="sec_calculadora" class="secao_pagina">
+        <section id="sec_calculadora" class="secao_dividida secao_pagina">
 
             <section class="sec_dados_desc_1">
 
@@ -63,8 +64,8 @@
                 </section>
 
                 <section class="desc_dados_2">
-                    <h3>Ao criar minha primeira calculadora, consegui desenvolver minha lógica em operações básicas de programação como XXX, SSS, DDD, entre outras.</h3>
-                    <h3>Embora a lógica por trás de uma calculadora seja simples, adiquirimos os conhecimentos, alem dos já citados, lidar com erros de entradas aléatórias do usuário, garantir que a interface seja responsiva e de quebra, somar os primeiros entendimentos de linguagem de estilo e design.</h3>
+                    <h3>Ao criar minha primeira calculadora, consegui desenvolver minha lógica em operações básicas de programação, como adição, subtração, multiplicação, divisão, entre outras.</h3>
+                    <h3>Embora a lógica por trás de uma calculadora seja simples, adquirimos conhecimentos adicionais, além dos já citados, como lidar com erros de entrada aleatórios do usuário, garantir que a interface seja responsiva e, ainda, aprimorar os primeiros entendimentos de linguagem de estilo e design.</h3>
                 </section>
 
             </section>
@@ -124,10 +125,50 @@
         </section>
         
 
-        <section id="sec_mapeamento" class="secao_pagina">
-            <p style="margin: auto; font-size: 32px; color: var(--texto_1);">Em desenvolvimento...</p>
+
+        <section id="sec_mapeamento" class="secao_unica secao_pagina">
+            
+            
+            <section class="conj_mapa">
+
+                <section class="sec_dados_desc_2">
+
+                    <section class="desc_dados_1">
+                        <h1>A melhor parte</h1>
+                        <h2>tinha que ser os mapas.</h2>
+                    </section>
+    
+                    <section class="desc_dados_2">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum odio non excepturi eveniet corrupti, quod in illo deleniti architecto placeat dolor sunt mollitia aperiam sapiente, ipsa ad quas laboriosam nam?</h3>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus optio tempore tenetur sequi ullam quo, debitis pariatur dolor nisi explicabo velit sunt magni deleniti ducimus esse adipisci? Veniam, laborum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam esse quae, laboriosam cumque similique ex perspiciatis, molestiae dolore aliquam at a error architecto ratione ea ad officiis laudantium molestias beatae.</h3>
+                    </section>
+    
+                </section>
+
+                <section class="cont_mapa" id="cont_mapa"></section>
+
+            </section>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </section>
-        <section id="sec_inicio" class="secao_pagina">
+
+
+
+        <section id="sec_inicio" class="secao_dividida secao_pagina">
             <p style="margin: auto; font-size: 32px; color: var(--texto_1);">Em desenvolvimento...</p>
         </section>
         
@@ -135,7 +176,7 @@
         
         
 
-        
+
 
         <section class="aba_paginacao_vertic">
     
@@ -169,13 +210,15 @@
 
 
 
-
-
-
+    
+    
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js'></script>
 
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/calculadora.js"></script>
+    <script src="./scripts/mapa.js"></script>
 
 </body>
 </html>
